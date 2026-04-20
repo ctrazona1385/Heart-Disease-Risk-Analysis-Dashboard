@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.ipynb
+.ipynb_checkpoints/
+*.png
+*.pptx
+*.docx
+*.csv
+.git/
+.gitignore
+deploy_azure.sh
