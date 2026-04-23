@@ -19,12 +19,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy app code and all pre-trained model artifacts
-COPY dashboard.py \
-     model.pkl \
-     shap_model.pkl \
-     scaler.pkl \
-     feature_cols.pkl \
-     ./
+COPY dashboard.py ./
+COPY models/ ./models/
 
 # Streamlit server config — headless, fixed port, disable XSRF for Azure ingress proxy
 RUN mkdir -p /app/.streamlit && \

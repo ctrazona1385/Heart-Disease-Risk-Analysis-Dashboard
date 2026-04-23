@@ -13,10 +13,10 @@ st.markdown("Enter your health metrics below to assess your risk level.")
 # ---- LOAD MODEL ARTIFACTS ----
 @st.cache_resource
 def load_artifacts():
-    model        = joblib.load('model.pkl')
-    shap_model   = joblib.load('shap_model.pkl')
-    scaler       = joblib.load('scaler.pkl')
-    feature_cols = joblib.load('feature_cols.pkl')
+    model        = joblib.load('models/model.pkl')
+    shap_model   = joblib.load('models/shap_model.pkl')
+    scaler       = joblib.load('models/scaler.pkl')
+    feature_cols = joblib.load('models/feature_cols.pkl')
     explainer    = shap.TreeExplainer(shap_model)
     return model, scaler, feature_cols, explainer
 
